@@ -10,3 +10,9 @@ for (const section of sections) {
   section.style.borderRadius = "5px";
   section.style.padding = "10px";
 }
+
+// const placeContainer = document.getElementById("place-container")
+// placeContainer.style.backgroundColor = "yellow"
+
+const placeContainer = document.getElementById("place-container")
+placeContainer.classList.add("yellow-bg")
