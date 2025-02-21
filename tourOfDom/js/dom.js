@@ -2,7 +2,7 @@
 // console.log(document.body)
 
 const sections = document.querySelectorAll("section");
-console.log(sections);
+// console.log(sections);
 
 for (const section of sections) {
   section.style.border = "2px solid red";

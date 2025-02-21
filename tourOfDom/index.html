@@ -35,7 +35,7 @@
       </section>
       <section id="place-container">
         <h1 id="place-title">Place I like visit</h1>
-        <ul>
+        <ul id="places-list">
           <li class="important-place">Sundorbon</li>
           <li class="important-place">Coxs</li>
           <li class="important-place">Sajak</li>
@@ -44,6 +44,7 @@
       </section>
     </main>
     <script src="./js/dom.js"></script>
+    <script src="./js/append.js"></script>
     <script>
       const liCollection = document.getElementsByTagName("li");
       //   console.log(liCollection);
@@ -64,10 +65,10 @@
       const someLi = document.querySelectorAll(".fruits-container li");
       //   console.log(someLi)
       for (const li of someLi) {
-        console.log(li.innerText);
+        // console.log(li.innerText);
       }
       const title = document.querySelector(".title")
-      console.log(title)
+      // console.log(title)
     </script>
   </body>
 </html>
