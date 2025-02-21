@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tour of dom</title>
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/style.css" />
   </head>
   <body>
     <header>
       <h1>Welcome to my Dom</h1>
     </header>
     <main>
-      <h2>My awesome dom</h2>
+      <h1>My awesome dom</h1>
       <ul>
         <li>Mintu</li>
         <li>Sajib</li>
@@ -19,5 +19,16 @@
       </ul>
     </main>
     <script src="./js/dom.js"></script>
+    <script>
+      const liCollection = document.getElementsByTagName("li");
+      //   console.log(liCollection);
+      for (const li of liCollection) {
+        console.log(li.innerText);
+      }
+      const h1Collection = document.getElementsByTagName("h1");
+      for (const h1 of h1Collection) {
+        console.log(h1.innerText);
+      }
+    </script>
   </body>
 </html>
