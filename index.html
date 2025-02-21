@@ -6,9 +6,9 @@
     <title>Tour of dom</title>
     <link rel="stylesheet" href="./style/style.css" />
     <style>
-        #fruits-title{
-            color: blue;
-        }
+      #fruits-title {
+        color: blue;
+      }
     </style>
   </head>
   <body>
@@ -16,7 +16,7 @@
       <h1>Welcome to my Dom</h1>
     </header>
     <main>
-      <section>
+      <section class="title" id="bg-blu">
         <h1>My awesome dom</h1>
         <ul>
           <li>Mintu</li>
@@ -24,7 +24,7 @@
           <li>Rakib</li>
         </ul>
       </section>
-      <section>
+      <section class="fruits-container">
         <h1 id="fruits-title">Fruits I like</h1>
         <ul>
           <li>Apple</li>
@@ -54,12 +54,20 @@
       for (const h1 of h1Collection) {
         // console.log(h1.innerText);
       }
-      const fruitsTitle = document.getElementById("fruits-title")
-      fruitsTitle.innerText = "Fruits change by js"
-      const places = document.getElementsByClassName("important-place")
-      for(const place of places){
-        console.log(place.innerText)
+      const fruitsTitle = document.getElementById("fruits-title");
+      fruitsTitle.innerText = "Fruits change by js";
+      const places = document.getElementsByClassName("important-place");
+      for (const place of places) {
+        // console.log(place.innerText)
       }
+
+      const someLi = document.querySelectorAll(".fruits-container li");
+      //   console.log(someLi)
+      for (const li of someLi) {
+        console.log(li.innerText);
+      }
+      const title = document.querySelector(".title")
+      console.log(title)
     </script>
   </body>
 </html>
