@@ -9,9 +9,25 @@
     <h1 id="page-title">Event Handler text</h1>
     <button id="btn-update-title">Update Title</button>
     <p id="user-info">No user</p>
-    <button id="btn-login">Login</button>
+    <button id="btn-login">Login</button> <br />
+    <br />
+    <!-- handel input text -->
+    <p id="name">No name</p>
+    <input id="input-name" type="text" />
+    <button id="btn-update">Update</button>
     <script>
-    
+      //set event li
+      document
+        .getElementById("btn-update")
+        .addEventListener("click", function () {
+          //set 2 : get the text input field
+          const inputName = document.getElementById("input-name");
+          const name = inputName.value;
+          console.log(name);
+          //set the name
+          const nameP = document.getElementById("name");
+          nameP.innerText = name;
+        });
     </script>
     <script src="./js/handler.js"></script>
   </body>
