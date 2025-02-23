@@ -13,15 +13,29 @@
     <!-- option 2 for event -->
     <button onclick="makeYellow()">Make Yellow</button>
     <button onclick="makeRed()">Make Red</button>
-    <br> <br>
+    <br />
+    <br />
     <!-- option 3  -->
-     <button id="btn-make-blue">Make Blue</button>
+    <button id="btn-make-blue">Make Blue</button>
+    <!-- option 4 -->
+    <button id="make-purple">Make Purple</button> <br /><br />
+    <!-- option 4 : addEventListener -->
+    <button id="make-green">Make Green</button>
+    <button id="make-gold">Make Gold</button>
+    <script>
+      //getElementById.addEventListener
+      document
+        .getElementById("make-green")
+        .addEventListener("click", function makeGreen() {
+          document.body.style.backgroundColor = "green";
+        });
 
-
-     <script>
-        const btnMakeBlue = document.getElementById("btn-make-blue")
-        
-     </script>
+      document
+        .getElementById("make-gold")
+        .addEventListener("click", function () {
+            document.body.style.backgroundColor = "gold"
+        });
+    </script>
     <script src="./js/event.js"></script>
   </body>
 </html>
