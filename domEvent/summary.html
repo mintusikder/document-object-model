@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Summary Event</title>
+  </head>
+  <body>
+    <h1>Dom event summary</h1>
+    <input id="input-text" type="text" />
+    <button onclick="addName()">Add</button>
+    <button id="btn-add">Add Name 2</button>
+
+    <div id="name-container"></div>
+
+    <script>
+      function addName() {
+        const inputName = document.getElementById("input-text");
+        const name = inputName.value;
+        //PARENT
+        const nameContainer = document.getElementById("name-container");
+        // create element
+        const p = document.createElement("p");
+        p.innerText = name;
+
+        nameContainer.appendChild(p);
+        inputName.value = "";
+      }
+
+      //add event lis
+      document
+        .getElementById("btn-add")
+        .addEventListener("click", function () {
+            
+        });
+    </script>
+  </body>
+</html>
