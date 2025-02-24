@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Awesome comment box</title>
+  </head>
+  <style>
+    .comment {
+      border: 2px solid blueviolet;
+      margin: 10px;
+      padding: 10px;
+      background-color: lightcoral;
+      border-radius: 10px;
+    }
+  </style>
+  <body>
+    <h1>My Awesome comment box</h1>
+    <section>
+      <h3>All comment here</h3>
+      <div id="comment-container">
+        <p class="comment">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt id
+          ut odit illum numquam aliquid sed pariatur ducimus exercitationem est
+          dicta, praesentium dolorum voluptatibus, dignissimos ad ab itaque
+          delectus sunt.
+        </p>
+        <p class="comment">
+          Natus esse nulla enim, sapiente reprehenderit nesciunt adipisci.
+          Excepturi dolores molestias sequi error. Ea recusandae quo excepturi,
+          ullam omnis voluptatem laboriosam ratione doloremque enim vel nostrum
+          voluptas provident, itaque voluptates!
+        </p>
+        <p class="comment">
+          Mollitia asperiores voluptatibus ipsum iste blanditiis quis fuga
+          repudiandae, consectetur odio, inventore dolorem libero itaque rerum
+          id in veniam tempore quasi commodi, voluptates accusamus magnam?
+          Laborum saepe modi error aliquam?
+        </p>
+      </div>
+      <div>
+        <textarea name="" cols="60" rows="5" id="text"></textarea> <br /><br />
+        <button id="post-btn">Post Comment</button>
+      </div>
+    </section>
+
+    <script>
+      document
+        .getElementById("post-btn")
+        .addEventListener("click", function () {
+          const newcomment = document.getElementById("text");
+          const testBox = newcomment.value
+          console.log(testBox);
+          const commentContainer = document.getElementById("comment-container");
+          const commentP = document.createElement("p");
+          commentP.classList.add("comment");
+          commentP.innerText = testBox;
+          commentContainer.appendChild(commentP);
+          newcomment.value = ''
+        });
+    </script>
+  </body>
+</html>
