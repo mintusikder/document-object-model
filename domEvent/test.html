@@ -3,22 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Text</title>
+    <title>Test</title>
+    <style>
+      .comment {
+        border: 2px solid blue;
+        background-color: lightblue;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 4px;
+      }
+    </style>
   </head>
   <body>
-    <p id="title">Name Update</p>
-    <input id="input-name" type="text" />
-    <button id="btn-update">Update</button>
+    <h1>Awesome Comment box</h1>
+    <section >
+      <h3>All Comment</h3>
+     <div id="comment-container">
+        <p class="comment">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis
+            nesciunt aliquid, aspernatur perspiciatis animi doloremque consequatur
+            tempore debitis suscipit itaque obcaecati nihil! Dicta asperiores
+            voluptate nemo maiores et blanditiis ex.
+          </p>
+          <p class="comment">
+            Delectus temporibus incidunt necessitatibus nobis autem nemo modi hic
+            itaque. Quis voluptates nostrum sequi fugit odit amet id, eveniet quasi
+            aliquid impedit asperiores, commodi temporibus sit rerum officiis
+            dolorem quae.
+          </p>
+          <p class="comment">
+            Facilis quibusdam obcaecati quisquam, fuga, aliquid reprehenderit atque
+            repellat quaerat ipsum doloribus beatae! Quae ducimus, dolore
+            exercitationem asperiores ipsa id vel soluta cum ea facere adipisci
+            blanditiis. Veritatis, facilis autem!
+          </p>
+    
+     </div>
+      <div>
+        <textarea name="" id="textInput" cols="60" rows="5"></textarea> <br><br>
+        <button id="post-comment">Post Comment</button>
+      </div>
+    </section>
 
     <script>
       document
-        .getElementById("btn-update")
+        .getElementById("post-comment")
         .addEventListener("click", function () {
-            const inputName = document.getElementById("input-name")
-            const name = inputName.value 
+            const textInput = document.getElementById("textInput")
+            const newComment = textInput.value 
 
-            const update = document.getElementById("title")
-            update.innerText = name
+            const commentContainer = document.getElementById("comment-container")
+            
+            const createElement = document.createElement('p')
+            createElement.innerText = newComment
+            createElement.classList.add("comment")
+
+            commentContainer.appendChild(createElement)
+            textInput.value = ''
         });
     </script>
   </body>
