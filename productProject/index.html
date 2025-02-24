@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="text-center lg:text-left">
+      <h1 class="text-5xl font-bold text-center mt-6 mb-6">Product list</h1>
+    </div>
+    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+      <div class="card-body">
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Product Name</span>
+          </label>
+          <input type="text" id="product-name" placeholder="name" class="input input-bordered" />
+        </div>
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Product Image</span>
+          </label>
+          <input type="text" id="product-img" placeholder="image" class="input input-bordered" />
+        </div>
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Price</span>
+          </label>
+          <input type="text" id="product-price" placeholder="price" class="input input-bordered" />
+        </div>
+        <div class="form-control mt-6">
+          <button id="product-btn" class="btn btn-primary">Add Product</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="product-list" class="grid grid-cols-1 md:grid-cols-3">
+                <h3></h3>
+                <p></p>
+    </div>
+
+    <script src="./projuct.js"></script>
+  </body>
+</html>
