@@ -13,40 +13,43 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body class="bg-slate-800">
-    <section class="max-w-md min-h-screen mx-auto py-6 bg-gray-200">
+    <section class="max-w-md min-h-screen mx-auto py-6 bg-gray-200 flex flex-col items-center">
       <header>
         <nav class="flex justify-center items-center mt-8">
-          <div
-            class="mt-10 relative flex justify-center items-center w-9/12 mb-10"
-          >
-            <img class="w-48 absolute" src="./assets/bg.png" alt="" />
-            <img class="w-16" src="./assets/Group.png" alt="" />
+          <div class="mt-10 relative flex justify-center items-center w-9/12 mb-10">
+            <img class="w-48 absolute" src="./assets/bg.png" alt="Background Image" />
+            <img class="w-16" src="./assets/Group.png" alt="Logo" />
           </div>
         </nav>
       </header>
-      <!-- login section -->
-      <div className="hero bg-base-200 min-h-screen">
-        <div className="hero-content flex-col lg:flex-row-reverse">
-          <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-            <div className="card-body">
-              <fieldset className="fieldset">
-                <label className="fieldset-label">Number</label>
+
+      <!-- Login Section -->
+      <div class="hero bg-base-200 w-full rounded-xl shadow-lg p-6">
+        <div class="hero-content flex-col lg:flex-row-reverse">
+          <div class="card bg-base-100 w-full max-w-sm shadow-2xl">
+            <div class="card-body">
+              <fieldset class="fieldset">
+                <label class="fieldset-label">Number</label>
                 <input
                   value="12345678912"
                   id="acc-number"
                   type="number"
-                  className="input"
-                  placeholder="Acc Number"
+                  class="input input-bordered w-full"
+                  placeholder="Account Number"
+                  required
                 />
-                <label className="fieldset-label">Pin</label>
+                <label class="fieldset-label mt-4">Pin</label>
                 <input
                   id="acc-pin"
                   type="password"
-                  className="input"
+                  class="input input-bordered w-full"
                   placeholder="Pin"
+                  required
                 />
-                <div><a className="link link-hover">Forgot password?</a></div>
-                <button id="login-btn" className="btn btn-neutral mt-4">
+                <div class="mt-2">
+                  <a href="#" class="link link-hover">Forgot password?</a>
+                </div>
+                <button id="login-btn" class="btn btn-neutral mt-4 w-full">
                   Login
                 </button>
               </fieldset>

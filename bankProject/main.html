@@ -22,40 +22,87 @@
           </div>
           <button class="btn">Log Out</button>
         </nav>
-        <section class="mt-10 p-4">
-          <h1 class="text-2xl font-bold mb-2">🔥 Welcome to Payooo!</h1>
-          <p>
-            Enjoy easy and convenient financial services with us. Cashout charge
-            is low and
-          </p>
-          <div class="cards grid grid-cols-3 mt-14 gap-3">
-            <div class="box border p-4 text-center rounded-sm">
-              <img class="w-8 mx-auto" src="./assets/wallet1.png" alt="" />
-              <h3>Add Money</h3>
-            </div>
-            <div class="box border p-4 text-center rounded-sm">
-              <img class="w-8 mx-auto" src="./assets/send1.png" alt="" />
-              <h3>CashOut</h3>
-            </div>
-            <div class="box border p-4 text-center rounded-sm">
-              <img class="w-8 mx-auto" src="./assets/money1.png" alt="" />
-              <h3>Transfer Money</h3>
-            </div>
-            <div class="box border p-4 text-center rounded-sm">
-              <img class="w-8 mx-auto" src="./assets/bonus1.png" alt="" />
-              <h3>Get Bonus</h3>
-            </div>
-            <div class="box border p-4 text-center rounded-sm">
-              <img class="w-8 mx-auto" src="./assets/purse1.png" alt="" />
-              <h3>Pay Bill</h3>
-            </div>
-            <div class="box border p-4 text-center rounded-sm">
-              <img class="w-8 mx-auto" src="./assets/transaction1.png" alt="" />
-              <h3>Transactions</h3>
+      </header>
+      <!-- card section -->
+      <section class="mt-10 p-4">
+        <h1 class="text-2xl font-bold mb-2">🔥 Welcome to Payooo!</h1>
+        <p>
+          Enjoy easy and convenient financial services with us. Cashout charge
+          is low and
+        </p>
+        <div class="cards grid grid-cols-3 mt-14 gap-3">
+          <div class="box border p-4 text-center rounded-sm">
+            <img class="w-8 mx-auto" src="./assets/wallet1.png" alt="" />
+            <h3>Add Money</h3>
+          </div>
+          <div class="box border p-4 text-center rounded-sm">
+            <img class="w-8 mx-auto" src="./assets/send1.png" alt="" />
+            <h3>CashOut</h3>
+          </div>
+          <div class="box border p-4 text-center rounded-sm">
+            <img class="w-8 mx-auto" src="./assets/money1.png" alt="" />
+            <h3>Transfer Money</h3>
+          </div>
+          <div class="box border p-4 text-center rounded-sm">
+            <img class="w-8 mx-auto" src="./assets/bonus1.png" alt="" />
+            <h3>Get Bonus</h3>
+          </div>
+          <div class="box border p-4 text-center rounded-sm">
+            <img class="w-8 mx-auto" src="./assets/purse1.png" alt="" />
+            <h3>Pay Bill</h3>
+          </div>
+          <div class="box border p-4 text-center rounded-sm">
+            <img class="w-8 mx-auto" src="./assets/transaction1.png" alt="" />
+            <h3>Transactions</h3>
+          </div>
+        </div>
+      </section>
+      <!-- add money section -->
+      <section>
+        <h1 class="text-2xl font-bold p-4">Add Money</h1>
+
+        <div class="hero-content flex-col lg:flex-row-reverse w-96 mx-auto">
+          <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <div class="card-body">
+              <fieldset class="fieldset">
+                <label class="fieldset-label font-bold text-sm"
+                  >Select A Bank</label>
+                <select class="select">
+                    <option disabled selected>Select Bank</option>
+                    <option>Bkash</option>
+                    <option>Nagad</option>
+                    <option>Roket</option>
+                  </select>
+                <label class="fieldset-label font-bold text-sm"
+                  >Bank Account Number</label
+                >
+                <input
+                  type="text"
+                  class="input"
+                  placeholder="Enter 11 digit account number"
+                />
+                <label class="fieldset-label font-bold text-sm"
+                  >Amount to Add</label
+                >
+                <input
+                  type="text"
+                  class="input"
+                  placeholder="Add Amount to withdraw"
+                />
+                <label class="fieldset-label font-bold text-sm"
+                  >Pin Number</label
+                >
+                <input
+                  type="text"
+                  class="input"
+                  placeholder="Enter 4 digit pin number"
+                />
+                <button class="btn btn-neutral mt-4">Add Money</button>
+              </fieldset>
             </div>
           </div>
-        </section>
-      </header>
+        </div>
+      </section>
     </section>
   </body>
 </html>
