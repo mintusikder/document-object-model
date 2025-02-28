@@ -2,6 +2,7 @@
 document
   .getElementById("login-btn")
   .addEventListener("click", function (event) {
+  
     event.preventDefault();
     const accNumber = document.getElementById("acc-number").value;
     const accPin = document.getElementById("acc-pin").value;
