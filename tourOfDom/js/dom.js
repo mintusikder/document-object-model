@@ -16,3 +16,4 @@ for (const section of sections) {
 
 const placeContainer = document.getElementById("place-container")
 placeContainer.classList.add("yellow-bg")
+

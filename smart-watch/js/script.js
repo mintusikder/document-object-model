@@ -30,3 +30,19 @@ function selectWristSize(size) {
     }
   }
 }
+
+//quantity element -------------
+
+const quantityElement = document.querySelectorAll(".quantity-button");
+console.log(quantityElement);
+
+for (const btn of quantityElement) {
+  btn.addEventListener("click", function (event) {
+    const amount = event.target.innerText === "+" ? 1 : -1;
+    const quantityElement = document.getElementById("quantity");
+    const currentQuantity = parseInt(quantityElement.innerText);
+    // const currentQuantity =
+    const newQuantity = Math.max(0, currentQuantity + amount);
+    quantityElement.innerText = newQuantity;
+  });
+}
