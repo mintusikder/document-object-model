@@ -71,7 +71,7 @@ document.getElementById("add-to-cart").addEventListener("click", function () {
       color: selectedColor,
       size: selectedSize,
       price: selectedPrice,
-      quantity : quantity
+      quantity: quantity,
     });
   } else {
     alert("Please Select a quantity");
@@ -102,3 +102,10 @@ document.getElementById("checkout-btn").addEventListener("click", function () {
     cartContainer.appendChild(row);
   }
 });
+
+document
+  .getElementById("continue-shopping")
+  .addEventListener("click", function () {
+    const cartModal = document.getElementById("cart-modal");
+    cartModal.classList.add("hidden");
+  });
