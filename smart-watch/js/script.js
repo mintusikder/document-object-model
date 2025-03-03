@@ -3,7 +3,6 @@ const ringBtn = document.querySelectorAll(".ring-button");
 for (const ringButton of ringBtn) {
   ringButton.addEventListener("click", function (event) {
     const color = event.target.id.replace("-color", "");
-    console.log(color);
     for (const ringColor of ringBtn) {
       ringColor.classList.remove("border-purple-600");
       ringColor.classList.add("border-gray-300");
@@ -21,8 +20,6 @@ function selectWristSize(size) {
   const sizes = ["S", "M", "L", "XL"];
   for (const element of sizes) {
     const button = document.getElementById("size-" + element);
-    console.log(button);
-    console.log(element);
     if (size === element) {
       button.classList.add("border-purple-600");
     } else {
@@ -34,7 +31,6 @@ function selectWristSize(size) {
 //quantity element -------------
 
 const quantityElement = document.querySelectorAll(".quantity-button");
-console.log(quantityElement);
 
 for (const btn of quantityElement) {
   btn.addEventListener("click", function (event) {
@@ -49,6 +45,7 @@ for (const btn of quantityElement) {
 
 //add to cart
 let cartCount = 0;
+let cartItem = [];
 document.getElementById("add-to-cart").addEventListener("click", function () {
   const quantity = parseInt(document.getElementById("quantity").innerText);
 
@@ -56,6 +53,25 @@ document.getElementById("add-to-cart").addEventListener("click", function () {
     document.getElementById("checkout-container").classList.remove("hidden");
     cartCount = cartCount + quantity;
     document.getElementById("cart-count").innerText = cartCount;
+
+    const selectedColorBtn = document.querySelector(
+      "button.border-purple-600.w-6"
+    );
+    const selectedColor = selectedColorBtn.id.split("-")[0];
+
+    const selectedSizeBtn = document.querySelector(
+      "button.border-purple-600:not(.w-6)"
+    );
+    const selectedSize = selectedSizeBtn.innerText.split(" ")[0];
+    const selectedPrice = selectedSizeBtn.innerText.split(" ")[1].split("$")[1];
+
+    cartItem.push({
+      image: selectedColor + ".png",
+      title: "Smart Watch",
+      color: selectedColor,
+      size: selectedSize,
+      price: selectedPrice,
+    });
   } else {
     alert("Please Select a quantity");
   }
